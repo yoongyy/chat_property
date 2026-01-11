@@ -1,0 +1,7 @@
+{
+  "name": "ChatProperty Malaysia",
+  "description": "Malaysia's first fully automated AI property assistant platform. Replace traditional listing portals with a conversational AI that searches, negotiates, and manages property deals 24/7.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
