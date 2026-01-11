@@ -9,6 +9,7 @@ export interface Message {
     uri: string;
   }>;
   properties?: Property[];
+  isRAGHit?: boolean; // Flag to show it came from your MongoDB
 }
 
 export interface Property {
@@ -23,15 +24,16 @@ export interface Property {
   imageUrl: string;
   description: string;
   source?: 'Mudah.my' | 'iProperty' | 'PropertyGuru' | 'Facebook';
+  uploaderType?: 'Owner' | 'Agent';
 }
 
-export interface Negotiation {
+export interface Lead {
   id: string;
-  propertyName: string;
-  status: 'Active' | 'Offer Pending' | 'Closed';
-  buyerName: string;
-  currentOffer: string;
-  lastUpdate: string;
+  name: string;
+  source: string;
+  type: 'Target Customer' | 'Partner Agent';
+  status: 'Pending Contact' | 'Message Sent' | 'Converted';
+  propertyTitle: string;
 }
 
 export interface CrawlBotStatus {
